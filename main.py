@@ -39,7 +39,7 @@ while trivia_start == True:
     print(
         " a) Jason Lee \n b) Tobey Maguire \n c) Chris Rock \n d) Thomas the Train "
     )
-    respuesta = input("Introduce tu respuesta aqui : ")
+    respuesta = input("Introduce tu respuesta aqui : ").lower()
     while respuesta not in ("a", "b", "c", "d"):
         print("Elige entre una opcion valida  a , b , c , d ")
         respuesta = input("Tu respuesta Aqui:")
@@ -59,10 +59,10 @@ while trivia_start == True:
           RESET)
 
     print("  a) 2005 \n  b) 1993 \n  c) 2000 \n  d) 1892  ")
-    respuesta2 = input("Introduce Tu respuesta Aqui: ")
+    respuesta2 = input("Introduce Tu respuesta Aqui: ").lower()
     while respuesta2 not in ("a", "b", "c", "d"):
         print("Elige entre una opcion valida  a , b , c , d ")
-        respuesta2 = input("Tu respuesta Aqui:")
+        respuesta2 = input("Tu respuesta Aqui:").lower()
     if respuesta2 == "b":
         puntaje += 15
         print("...")
@@ -75,10 +75,10 @@ while trivia_start == True:
 
     print(YELLOW + "Tercera Pregunta: Donde se Grabo la serie?" + RESET)
     print(" a) Australia \n b) Irlanda \n c) EEUU \n d) Mexico ")
-    respuesta3 = input("Tu respuesta aqui : ")
+    respuesta3 = input("Tu respuesta aqui : ").lower()
     while respuesta3 not in ("a", "b", "c", "d", "x"):
         print("Elige entre una opcion valida  a , b , c , d ")
-        respuesta3 = input("Tu respuesta Aqui:")
+        respuesta3 = input("Tu respuesta Aqui:").lower()
 
     if respuesta3 == "c":
         puntaje += 20
@@ -97,7 +97,7 @@ while trivia_start == True:
     randomp = input(
         YELLOW +
         'Quieres Incrementar tu puntaje? Ingresa "si" si deseas intentarlo :' +
-        RESET)
+        RESET).lower()
     if randomp == "si":
         puntaje = puntaje * random
         print("Felicidades tu nuevo puntaje es ... : ", puntaje)
