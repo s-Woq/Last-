@@ -42,7 +42,7 @@ while trivia_start == True:
     respuesta = input("Introduce tu respuesta aqui : ").lower()
     while respuesta not in ("a", "b", "c", "d"):
         print("Elige entre una opcion valida  a , b , c , d ")
-        respuesta = input("Tu respuesta Aqui:")
+        respuesta = input("Tu respuesta Aqui:").lower()
     if respuesta == "a":
         puntaje += 10
 
