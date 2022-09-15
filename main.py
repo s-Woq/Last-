@@ -1,27 +1,32 @@
 import time
-import random
+from random import randint
 from datetime import datetime
 import pytz
+import os
 
+
+def clear():
+  os.system('clear')
 
 RED = '\033[31m'
 YELLOW = '\033[33m'
 RESET = '\033[39m'
 GREEN = '\033[32m'
-
-random_country=random.randint(0,9)
-countries=['Asia/Seoul','America/New_York','US/Central', 'Europe/Athens','America/Lima','America/Vancouver','Europe/Vienna','US/Arizona','America/Argentina/Buenos_Aires', 'America/Santiago']
-
-distance = ['16.296 km','5871 km', "who knows :)", '11.758 km', '0km', '8165 km', '11.247 km','5789 km','3,937.1 km', '3,287.0 km']
-
-
-UTC = pytz.utc
-requested_location = pytz.timezone(countries[random_country])
-name_of_country = countries[random_country] 
-print(name_of_country, "is" , distance[random_country],"away!")
-date_time_utc=datetime.now(requested_location)
-
-print("Current time somewhere else in the planet:", "(",countries[random_country],')',GREEN,date_time_utc.strftime( "Time -> H: %H : M: %M : S: %S"),RESET)
+def countries_random():
+  random_country=randint(0,9)
+  countries=['Asia/Seoul','America/New_York','US/Central', 'Europe/Athens','America/Lima','America/Vancouver','Europe/Vienna','US/Arizona','America/Argentina/Buenos_Aires', 'America/Santiago']
+  
+  distance = ['16.296 km','5871 km', "who knows :)", '11.758 km', '0km', '8165 km', '11.247 km','5789 km','3,937.1 km', '3,287.0 km']
+  
+  
+  #UTC = pytz.utc
+  requested_location = pytz.timezone(countries[random_country])
+  name_of_country = countries[random_country] 
+  print(YELLOW +name_of_country + RESET, "is" , distance[random_country],"away!")
+  date_time_utc=datetime.now(requested_location)
+  
+  print("  Current time somewhere else in the planet:", "(",countries[random_country],')'+"\n",GREEN,date_time_utc.strftime( "Time -> H: %H : M: %M : S: %S"),RESET)
+  
 
 
 #colors->
@@ -30,10 +35,13 @@ print("Current time somewhere else in the planet:", "(",countries[random_country
 
   
 
+
+countries_random()
+
 record = []
 count = 0
 round = 0
-random = random.randint(2, 5)
+random = randint(2, 5)
 z = 1
 
 puntaje = 0
@@ -52,6 +60,7 @@ print("Tienes", puntaje, "puntos")
 trivia_start = True
 attempts = 0
 while trivia_start == True:
+    countries_random()
     attempts += 1
     puntaje = 0
     print("Numero de Intentos:", attempts, "!")
@@ -138,6 +147,8 @@ while trivia_start == True:
         count = 0
         round += 1
         z += 1
+        clear()
+    
 
     if try_again != "si":     
       print("Espero te haya gustado la trivia ", nombre, " , Hasta Pronto!")
