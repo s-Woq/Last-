@@ -328,6 +328,14 @@ gen_docs = ["pytoolconfig", "sphinx-rtd-theme (>=1.0.0)", "sphinx-autodoc-typehi
 doc = ["sphinx (>=4.5.0)", "tabulate (>=0.8.9)"]
 
 [[package]]
+name = "pytz"
+version = "2022.2.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "replit"
 version = "3.2.4"
 description = "A library for interacting with features of repl.it"
@@ -477,7 +485,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "4ceda468c6ce7d0b641f0c244f742d3a912100cd87f29fbe250fdc0a2528f740"
+content-hash = "bec5fdca9715737f4b5c898840ec4d73cfc52cd8e092e7b782ae259dc9b8b253"
 
 [metadata.files]
 aiohttp = []
@@ -507,6 +515,7 @@ pyparsing = []
 python-lsp-jsonrpc = []
 python-lsp-server = []
 pytoolconfig = []
+pytz = []
 replit = []
 requests = []
 rope = []
