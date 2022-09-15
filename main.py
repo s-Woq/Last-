@@ -40,7 +40,7 @@ countries_random()
 
 record = []
 count = 0
-round = 0
+round = 1
 random = randint(2, 5)
 z = 1
 
@@ -60,6 +60,7 @@ print("Tienes", puntaje, "puntos")
 trivia_start = True
 attempts = 0
 while trivia_start == True:
+    print(GREEN + "ROUND" , round)
     countries_random()
     attempts += 1
     puntaje = 0
